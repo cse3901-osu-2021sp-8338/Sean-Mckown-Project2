@@ -5,10 +5,18 @@ class Main
   
   #create deck of cards
   cards = Deck.new
-  
-  #prints set of 12 cards
-  cards.print_cards
-  
+
+  puts 'Welcome to the game of set. Would you like to play? Type yes or no'
+  String answer = gets.chomp.downcase
+  while answer == 'yes' && !cards.empty?
+    #prints hand of 12 cards
+    hand = cards.create_hand
+    cards.print_cards
+    puts 'Would you like to continue playing'
+   
+    answer = gets.chomp.downcase
+       end
+       
  
 
  
