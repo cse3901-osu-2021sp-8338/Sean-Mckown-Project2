@@ -1,5 +1,6 @@
 require './card'
 require './deck'
+require './set'
 
 class Main
   
@@ -12,6 +13,11 @@ class Main
     #prints hand of 12 cards
     hand = cards.create_hand
     cards.print_cards
+    set = Set.new
+    set.get_set(hand)
+   puts  set.is_set?
+    
+    
     puts 'Would you like to continue playing'
    
     answer = gets.chomp.downcase
