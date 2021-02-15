@@ -19,10 +19,13 @@ class Deck
     #creates an array out of first 12 cards in deck
     @cards.shuffle!
     @hand = @cards.shift(12)
-  end 
+  end
+
+  def empty?
+    @cards.empty?
+  end
 
   def print_cards
-    create_hand
     #prints set of cards
     for i in 0..@hand.length-1 
       puts "Card ##{i} Color:#{@hand[i].color} Shape:#{@hand[i].shape} Number:#{@hand[i].number} Fill:#{@hand[i].fill}"  
