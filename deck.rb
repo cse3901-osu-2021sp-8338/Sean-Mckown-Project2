@@ -29,7 +29,8 @@ class Deck
     #prints set of cards
     for i in 0..@hand.length-1 
       puts "Card ##{i} Color:#{@hand[i].color} Shape:#{@hand[i].shape} Number:#{@hand[i].number} Fill:#{@hand[i].fill}"  
-    end    
+    end
+   
   end
  
 end 

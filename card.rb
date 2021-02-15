@@ -10,5 +10,6 @@ class Card
     @fill = fill
   end
 
+
 end 
     
