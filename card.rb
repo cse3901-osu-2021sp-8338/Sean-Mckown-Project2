@@ -1,7 +1,7 @@
 #creates a card
 
 class Card
-  attr_accessor :color, :number, :shape, :fill
+  attr_reader :color, :number, :shape, :fill
 
   def initialize(color, number, shape, fill)
     @color = color
@@ -9,5 +9,6 @@ class Card
     @shape = shape
     @fill = fill
   end
+
 end 
     

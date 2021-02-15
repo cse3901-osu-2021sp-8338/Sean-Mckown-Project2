@@ -1,7 +1,8 @@
 require "./card"
 class Deck
-  #creates array with all cards
+  
   def initialize
+    #creates array with all 81 cards
    @cards  = []
     ["red", "green", "purple"].each do |color|
       [1,2,3].each do |number|
@@ -14,5 +15,18 @@ class Deck
     end
   end
   
-        
+  def create_hand
+    #creates an array out of first 12 cards in deck
+    @cards.shuffle!
+    @hand = @cards.shift(12)
+  end 
+
+  def print_cards
+    create_hand
+    #prints set of cards
+    for i in 0..@hand.length-1 
+      puts "Card ##{i} Color:#{@hand[i].color} Shape:#{@hand[i].shape} Number:#{@hand[i].number} Fill:#{@hand[i].fill}"  
+    end    
+  end
+ 
 end 
