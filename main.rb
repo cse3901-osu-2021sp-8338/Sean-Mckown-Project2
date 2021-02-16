@@ -33,7 +33,7 @@ class Main
     set.get_set(hand)
     
     #check if correct set
-    if !set.is_set?
+    if set.is_set?
       puts 'Congratulation you found a set!'
       puts 'Would you like to continue playing?'
       game.give_point
