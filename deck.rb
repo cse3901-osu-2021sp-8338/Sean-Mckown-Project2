@@ -18,17 +18,26 @@ class Deck
   def create_hand
     #creates an array out of first 12 cards in deck
     @cards.shuffle!
-    @hand = @cards.shift(12)
+    hand = @cards.shift(12)
   end
 
+  #check if deck is empty
   def empty?
     @cards.empty?
   end
 
-  def print_cards
-    #prints set of cards
-    for i in 0..@hand.length-1 
-      puts "Card ##{i} Color:#{@hand[i].color} Shape:#{@hand[i].shape} Number:#{@hand[i].number} Fill:#{@hand[i].fill}"  
+  #adds 3 new cards to hand
+  def add_cards(hand)
+    hand.concat( @cards.shift(3))
+    puts @cards.length
+    return hand
+  end
+
+  #prints hand
+  def print_cards(hand)
+    
+    for i in 0..hand.length-1 
+      puts "Card #{i} Color:#{hand[i].color} Shape:#{hand[i].shape} Number:#{hand[i].number} Fill:#{hand[i].fill}"  
     end
    
   end
