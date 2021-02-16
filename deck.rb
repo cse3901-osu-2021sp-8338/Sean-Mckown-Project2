@@ -29,17 +29,12 @@ class Deck
   #adds 3 new cards to hand
   def add_cards(hand)
     hand.concat( @cards.shift(3))
-    puts @cards.length
-    return hand
   end
 
   #prints hand
   def print_cards(hand)
-    
     for i in 0..hand.length-1 
       puts "Card #{i} Color:#{hand[i].color} Shape:#{hand[i].shape} Number:#{hand[i].number} Fill:#{hand[i].fill}"  
     end
-   
   end
- 
 end 
