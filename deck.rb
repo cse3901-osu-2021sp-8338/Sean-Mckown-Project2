@@ -1,10 +1,11 @@
-require "./card"
+require './card'
+require 'colorize'
 class Deck
   
   def initialize
     #creates array with all 81 cards
    @cards  = []
-    ["red", "green", "purple"].each do |color|
+    ["red".red, "green".green, "purple".magenta].each do |color|
       [1,2,3].each do |number|
         ["dimand","squiggle", "oval"].each do |shape|
           ["soild", "striped", "open"].each do |fill|
