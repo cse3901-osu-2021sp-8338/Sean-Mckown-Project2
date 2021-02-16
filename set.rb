@@ -4,7 +4,6 @@ require './card'
 class Set
 
   def get_set(hand)
-    
     #check for error in input
     passed = false
     while !passed
@@ -41,6 +40,11 @@ class Set
     end
     #if 2 cards have the same value but not the thrid, it is not a set
     numbers.uniq.count!=2 && color.uniq.count!=2 && shape.uniq.count!=2 && fill.uniq.count!=2
+  end
+
+  def delete_set(hand)
+    #deletes the set from the current hand
+    hand - @set
   end
   
 end
