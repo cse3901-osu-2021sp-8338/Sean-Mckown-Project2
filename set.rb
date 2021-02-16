@@ -42,9 +42,9 @@ class Set
     numbers.uniq.count!=2 && color.uniq.count!=2 && shape.uniq.count!=2 && fill.uniq.count!=2
   end
 
+  #deletes the set from the hand
   def delete_set(hand)
-    #deletes the set from the current hand
-    hand - @set
+   hand - @set
   end
   
 end
